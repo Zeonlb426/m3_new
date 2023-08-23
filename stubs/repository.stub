@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Connection;
+use App\Contracts\AbstractRepository;
+use {{ namespacedModel }};
+
+/**
+ * Class {{ class }}
+ * @package App\Repositories
+ *
+ * @extends \App\Contracts\AbstractRepository<{{ model }}>
+ */
+final class {{ class }} extends AbstractRepository
+{
+    public function __construct(Connection $connection)
+    {
+        parent::__construct($connection, {{ model }}::class);
+    }
+}

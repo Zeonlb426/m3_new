@@ -1,0 +1,19 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    #
+    paths:
+        - app
+
+    # The level 8 is the highest level
+    level: 8
+
+    ignoreErrors:
+        - '#Filesystem::getAdapter#' #app/Components/MediaLibrary/UrlGenerator.php:49
+
+    excludePaths:
+        - ./app/Admin
+
+    checkMissingIterableValueType: false
+    checkUninitializedProperties: true
